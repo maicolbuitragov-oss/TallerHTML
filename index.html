@@ -1,0 +1,332 @@
+```html
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sabores de la Casa</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="js/script.js" defer></script>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+    <h1>Sabores de la Casa</h1>
+
+    <nav>
+
+        <a href="#inicio">Inicio</a>
+
+        <a href="#menu">Menú</a>
+
+        <a href="#nosotros">Nosotros</a>
+
+        <a href="#contacto">Reservas</a>
+
+    </nav>
+
+</header>
+
+
+<main>
+
+
+    <!-- PORTADA -->
+
+    <section id="inicio">
+
+        <h2>Bienvenidos a Sabores de la Casa</h2>
+
+        <p>
+            Disfruta de deliciosos platos preparados con ingredientes
+            frescos y mucho sabor.
+        </p>
+
+        <a href="#menu" class="boton">
+            Ver nuestro menú
+        </a>
+
+    </section>
+
+
+    <!-- MENÚ -->
+
+    <section id="menu">
+
+        <h2>Nuestro Menú</h2>
+
+        <div class="platos">
+
+
+            <!-- PLATO 1 -->
+
+            <article>
+
+                <img
+                    src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd"
+                    alt="Hamburguesa especial">
+
+                <h3>Hamburguesa Especial</h3>
+
+                <p>
+                    Carne artesanal, queso, lechuga, tomate y nuestra
+                    salsa especial.
+                </p>
+
+                <strong>$25.000</strong>
+
+            </article>
+
+
+            <!-- PLATO 2 -->
+
+            <article>
+
+                <img
+                    src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002"
+                    alt="Pizza de la casa">
+
+                <h3>Pizza de la Casa</h3>
+
+                <p>
+                    Pizza artesanal con queso, pepperoni, champiñones
+                    y vegetales frescos.
+                </p>
+
+                <strong>$30.000</strong>
+
+            </article>
+
+
+            <!-- PLATO 3 -->
+
+            <article>
+
+                <img
+                    src="https://images.unsplash.com/photo-1532550907401-a500c9a57435"
+                    alt="Pollo a la parrilla">
+
+                <h3>Pollo a la Parrilla</h3>
+
+                <p>
+                    Pechuga de pollo a la parrilla acompañada de papas
+                    y ensalada fresca.
+                </p>
+
+                <strong>$28.000</strong>
+
+            </article>
+
+
+            <!-- PLATO 4 -->
+
+            <article>
+
+                <img
+                    src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c"
+                    alt="Ensalada fresca">
+
+                <h3>Ensalada Fresca</h3>
+
+                <p>
+                    Mezcla de vegetales frescos, aguacate, tomate y
+                    aderezo especial de la casa.
+                </p>
+
+                <strong>$22.000</strong>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- NOSOTROS -->
+
+    <section id="nosotros">
+
+        <h2>Sobre Nosotros</h2>
+
+        <p>
+            En Sabores de la Casa nos encanta ofrecer comida deliciosa,
+            un ambiente agradable y una experiencia especial para
+            nuestros clientes.
+        </p>
+
+    </section>
+
+
+    <!-- RESERVAS -->
+
+    <section id="contacto">
+
+        <h2>Reserva tu mesa</h2>
+
+        <p>
+            Déjanos tus datos y nos pondremos en contacto contigo.
+        </p>
+
+
+        <form>
+
+
+            <!-- NOMBRE -->
+
+            <label for="nombre">
+                Nombre:
+            </label>
+
+            <input
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Escribe tu nombre"
+                required>
+
+
+            <!-- CORREO -->
+
+            <label for="correo">
+                Correo electrónico:
+            </label>
+
+            <input
+                type="email"
+                id="correo"
+                name="correo"
+                placeholder="Escribe tu correo"
+                required>
+
+
+            <!-- TELÉFONO -->
+
+            <label for="telefono">
+                Teléfono:
+            </label>
+
+            <input
+                type="tel"
+                id="telefono"
+                name="telefono"
+                placeholder="Escribe tu teléfono">
+
+
+            <!-- ASUNTO -->
+
+            <label for="asunto">
+                Asunto:
+            </label>
+
+            <input
+                type="text"
+                id="asunto"
+                name="asunto"
+                placeholder="Motivo de la reserva"
+                required>
+
+
+            <!-- NÚMERO DE PERSONAS -->
+
+            <label for="personas">
+                Número de personas:
+            </label>
+
+            <input
+                type="number"
+                id="personas"
+                name="personas"
+                min="1"
+                max="20"
+                placeholder="Ejemplo: 4"
+                required>
+
+
+            <!-- FECHA -->
+
+            <label for="fecha">
+                Fecha:
+            </label>
+
+            <input
+                type="date"
+                id="fecha"
+                name="fecha"
+                required>
+
+
+            <!-- MENSAJE -->
+
+            <label for="mensaje">
+                Mensaje:
+            </label>
+
+            <textarea
+                id="mensaje"
+                name="mensaje"
+                placeholder="¿Tienes alguna solicitud especial?"
+                required></textarea>
+
+
+            <!-- ACEPTACIÓN -->
+
+            <div class="aceptacion">
+
+                <input
+                    type="checkbox"
+                    id="aceptacion"
+                    name="aceptacion"
+                    required>
+
+                <label for="aceptacion">
+                    Acepto que mis datos sean utilizados para gestionar
+                    la reserva.
+                </label>
+
+            </div>
+
+
+            <!-- BOTÓN -->
+
+            <button type="submit">
+                Reservar mesa
+            </button>
+
+
+        </form>
+
+    </section>
+
+
+</main>
+
+
+<!-- PIE DE PÁGINA -->
+
+<footer>
+
+    <p>
+        &copy; 2026 Sabores de la Casa.
+        Todos los derechos reservados.
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
+```

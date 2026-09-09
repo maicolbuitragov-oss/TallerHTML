@@ -1,0 +1,697 @@
+```css
+/* =========================================
+   VARIABLES
+   ========================================= */
+
+:root {
+    --color-primary: #3b1f16;
+    --color-accent: #e6a23c;
+    --color-accent-dark: #c98220;
+    --color-bg: #f8f5f0;
+    --color-section: #eee5d8;
+    --color-text: #333333;
+    --color-white: #ffffff;
+    --color-border: #cccccc;
+
+    --space: 1rem;
+}
+
+
+/* =========================================
+   CONFIGURACIÓN GENERAL
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    overflow-x: hidden;
+}
+
+
+/* =========================================
+   ENCABEZADO
+   ========================================= */
+
+header {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 25px;
+    text-align: center;
+}
+
+
+header h1 {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   NAVEGACIÓN
+   ========================================= */
+
+nav a {
+    color: var(--color-white);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 17px;
+    transition: color 0.3s ease;
+}
+
+
+nav a:hover {
+    color: var(--color-accent);
+}
+
+
+/* =========================================
+   FOCUS ACCESIBLE
+   ========================================= */
+
+nav a:focus-visible,
+.boton:focus-visible,
+form input:focus-visible,
+form textarea:focus-visible,
+form button:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
+
+/* =========================================
+   CONTENIDO PRINCIPAL
+   ========================================= */
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+section {
+    padding: 60px 30px;
+    text-align: center;
+}
+
+
+/* =========================================
+   PORTADA
+   ========================================= */
+
+#inicio {
+    min-height: 500px;
+
+    background-image: url("https://images.unsplash.com/photo-1517248135467-4c7edcad34c4");
+    background-size: cover;
+    background-position: center;
+
+    color: var(--color-white);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+
+/* OSCURECER IMAGEN */
+
+#inicio::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.55);
+}
+
+
+/* TEXTO DE PORTADA */
+
+#inicio h2,
+#inicio p,
+#inicio .boton {
+    position: relative;
+    z-index: 1;
+}
+
+
+#inicio h2 {
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+
+#inicio p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
+   BOTONES
+   ========================================= */
+
+.boton {
+    background-color: var(--color-accent);
+    color: var(--color-white);
+
+    text-decoration: none;
+
+    padding: 15px 30px;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+
+    display: inline-block;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s ease;
+}
+
+
+.boton:hover {
+    background-color: var(--color-accent-dark);
+}
+
+
+/* =========================================
+   MENÚ
+   ========================================= */
+
+#menu h2 {
+    font-size: 32px;
+    margin-bottom: 35px;
+    color: var(--color-primary);
+}
+
+
+/* =========================================
+   TARJETAS - FLEXBOX
+   ========================================= */
+
+.platos {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+
+/* =========================================
+   TARJETAS
+   ========================================= */
+
+article {
+    background-color: var(--color-white);
+
+    flex: 1 1 280px;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+article:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =========================================
+   IMÁGENES
+   ========================================= */
+
+article img {
+    width: 100%;
+    height: 200px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   NOMBRE DEL PLATO
+   ========================================= */
+
+article h3 {
+    color: var(--color-primary);
+
+    margin-bottom: 15px;
+}
+
+
+/* =========================================
+   DESCRIPCIÓN
+   ========================================= */
+
+article p {
+    margin-bottom: 20px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   PRECIO
+   ========================================= */
+
+article strong {
+    color: var(--color-accent-dark);
+
+    font-size: 20px;
+}
+
+
+/* =========================================
+   NOSOTROS
+   ========================================= */
+
+#nosotros {
+    background-color: var(--color-section);
+}
+
+
+#nosotros h2,
+#contacto h2 {
+    color: var(--color-primary);
+
+    font-size: 30px;
+
+    margin-bottom: 20px;
+}
+
+
+#nosotros p {
+    max-width: 700px;
+
+    margin: auto;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   RESERVAS
+   ========================================= */
+
+#contacto {
+    background-color: var(--color-bg);
+}
+
+
+#contacto > p {
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
+   FORMULARIO
+   ========================================= */
+
+form {
+    max-width: 500px;
+
+    margin: auto;
+
+    background-color: var(--color-white);
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+
+    text-align: left;
+}
+
+
+/* =========================================
+   ETIQUETAS
+   ========================================= */
+
+form label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: var(--color-primary);
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   CAMPOS
+   ========================================= */
+
+form input:not([type="checkbox"]),
+form textarea {
+    width: 100%;
+
+    padding: 12px;
+
+    margin-bottom: 20px;
+
+    border: 1px solid var(--color-border);
+
+    border-radius: 6px;
+
+    font-size: 15px;
+
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================================
+   ÁREA DE MENSAJE
+   ========================================= */
+
+form textarea {
+    height: 120px;
+
+    resize: vertical;
+}
+
+
+/* =========================================
+   ACEPTACIÓN
+   ========================================= */
+
+.aceptacion {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+
+.aceptacion input[type="checkbox"] {
+    width: auto;
+
+    margin: 3px 0 0 0;
+
+    flex-shrink: 0;
+}
+
+
+.aceptacion label {
+    display: inline;
+
+    margin: 0;
+
+    font-weight: normal;
+
+    color: var(--color-text);
+
+    line-height: 1.4;
+
+    cursor: pointer;
+}
+
+
+/* =========================================
+   BOTÓN DEL FORMULARIO
+   ========================================= */
+
+form button {
+    width: 100%;
+
+    background-color: var(--color-primary);
+
+    color: var(--color-white);
+
+    border: none;
+
+    padding: 14px;
+
+    border-radius: 6px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s ease;
+}
+
+
+form button:hover {
+    background-color: #5a3022;
+}
+
+
+/* =========================================
+   PIE DE PÁGINA
+   ========================================= */
+
+footer {
+    background-color: var(--color-primary);
+
+    color: var(--color-white);
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+
+/* =========================================
+   TABLET - 768px
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 20px;
+    }
+
+
+    header h1 {
+        font-size: 30px;
+    }
+
+
+    nav a {
+        display: inline-block;
+
+        margin: 8px;
+
+        font-size: 16px;
+    }
+
+
+    section {
+        padding: 50px 20px;
+    }
+
+
+    #inicio {
+        min-height: 450px;
+    }
+
+
+    #inicio h2 {
+        font-size: 36px;
+    }
+
+
+    #inicio p {
+        font-size: 18px;
+    }
+
+
+    .platos {
+        gap: 20px;
+    }
+
+
+    article {
+        flex: 1 1 calc(50% - 10px);
+    }
+
+
+    article img {
+        height: 180px;
+    }
+
+}
+
+
+/* =========================================
+   CELULAR - 390px
+   ========================================= */
+
+@media (max-width: 390px) {
+
+    header {
+        padding: 18px 10px;
+    }
+
+
+    header h1 {
+        font-size: 26px;
+
+        margin-bottom: 12px;
+    }
+
+
+    nav {
+        width: 100%;
+    }
+
+
+    nav a {
+        display: block;
+
+        margin: 8px 0;
+
+        font-size: 16px;
+    }
+
+
+    main {
+        width: 100%;
+
+        max-width: 100%;
+    }
+
+
+    section {
+        width: 100%;
+
+        padding: 40px 15px;
+    }
+
+
+    #inicio {
+        min-height: 500px;
+
+        width: 100%;
+
+        padding: 40px 15px;
+    }
+
+
+    #inicio h2 {
+        font-size: 30px;
+
+        line-height: 1.2;
+    }
+
+
+    #inicio p {
+        font-size: 16px;
+
+        line-height: 1.5;
+    }
+
+
+    .boton {
+        padding: 12px 22px;
+
+        font-size: 15px;
+    }
+
+
+    .platos {
+        flex-direction: column;
+
+        gap: 20px;
+
+        width: 100%;
+    }
+
+
+    article {
+        flex: 1 1 100%;
+
+        width: 100%;
+
+        padding: 15px;
+    }
+
+
+    article img {
+        width: 100%;
+
+        height: 200px;
+    }
+
+
+    #menu h2,
+    #nosotros h2,
+    #contacto h2 {
+        font-size: 27px;
+    }
+
+
+    #nosotros p {
+        width: 100%;
+    }
+
+
+    form {
+        width: 100%;
+
+        max-width: 100%;
+
+        padding: 20px;
+    }
+
+
+    form input:not([type="checkbox"]),
+    form textarea,
+    form button {
+        max-width: 100%;
+    }
+
+
+    .aceptacion {
+        width: 100%;
+    }
+
+
+    footer {
+        width: 100%;
+
+        font-size: 14px;
+
+        padding: 18px 10px;
+    }
+
+}
+```
